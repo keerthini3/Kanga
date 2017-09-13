@@ -1,0 +1,217 @@
+$text-default: #30383B !default;
+$text-danger: #DE0500 !default;
+$border-color: #95989A !default;
+$purple-color: #531199 !default;
+$pink-color: #FC3C8E !default;
+$green-color: #22CE93 !default;
+$red-color: #FD004D !default;
+$light-purple: #7541AD !default;
+$light-pink: #FC63A4 !default;
+$light-green: #4ED7A8 !default;
+$light-red: #FD3371 !default;
+$text-danger: #DE0601 !default;
+
+.tt-grid {
+	position: relative;
+	// margin: 20px auto;
+	// padding: 0;
+	// max-width: 960px;
+	// list-style: none;
+	// text-align: center;
+	// font-size: 0px;
+}
+
+// .tt-grid:before,
+// .tt-grid:after {
+// 	display: table;
+// 	content: ' ';
+// }
+
+// .tt-grid:after {
+// 	clear: both;
+// }
+
+.tt-grid li {
+	position: relative;
+	display: inline-block;
+	margin: 10px 0;
+	width: 49%;
+	height: 400px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.tt-grid-wrapper{
+	background-image:url("/images/Slices/modvigil-bg.png");
+	width:100%;
+	height: 400px;
+	background-size: contain;
+}
+.tt-indicator{
+	// margin-top: -70px;
+}
+.tt-grid li a {
+	// background: #000;
+	position: absolute;
+	// top: 0;
+	// left: 0;
+	width: 100%;
+}
+
+// .tt-grid li a:nth-child(2) {
+// 	z-index: 1;
+// 	visibility: hidden;
+// }
+
+/* Navigation */
+.tt-grid-wrapper nav {
+	text-align: center;
+  position: absolute;
+  left: calc(50% - 68px);
+  top: 390px;
+}
+
+.tt-grid-wrapper nav a {
+	display: inline-block;
+	margin: 0 8px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	border: 1px solid $text-default;
+	// background: red;
+	cursor: pointer;
+	// opacity: 0.7;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.touch .tt-grid-wrapper nav a {
+	width: 30px;
+	height: 30px;
+}
+
+.tt-grid-wrapper nav a:hover {
+	opacity: 1;
+}
+
+.tt-grid-wrapper nav a.tt-current {
+	opacity: 1;
+	border: 1px solid $text-danger;
+}
+
+.tt-grid.tt-effect-active li a {
+	pointer-events: none;
+}
+
+/* Individual grid effects */
+
+
+/* Slide and reveal */
+.tt-effect-slide.tt-effect-active li:not(.tt-empty) a:first-child {
+	z-index: 100;
+	overflow: hidden;
+	margin: 0;
+	-webkit-animation: slideOut 0.5s forwards;
+}
+
+.tt-effect-slide.tt-effect-active a:nth-child(2) {
+	visibility: visible;
+}
+
+.tt-effect-slide.tt-effect-active li:not(.tt-empty) a:only-child {
+	-webkit-animation: fadeOut 0.5s forwards;
+	animation: fadeOut 0.5s forwards;
+}
+
+.tt-effect-slide.tt-effect-active li.tt-empty a {
+	-webkit-animation: fadeIn 0.5s forwards;
+	animation: fadeIn 0.5s forwards;
+}
+
+
+/* Animation delays */
+.tt-grid-wrapper .tt-effect-delay.tt-effect-active li:nth-child(2) a {
+	-webkit-animation-delay: 0.1s;
+	animation-delay: 0.1s;
+}
+
+.tt-grid-wrapper .tt-effect-delay.tt-effect-active li:nth-child(3) a {
+	-webkit-animation-delay: 0.2s;
+	animation-delay: 0.2s;
+}
+
+.tt-grid-wrapper .tt-effect-delay.tt-effect-active li:nth-child(4) a {
+	-webkit-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+}
+
+.tt-grid-wrapper .tt-effect-delay.tt-effect-active li:nth-child(5) a {
+	-webkit-animation-delay: 0.4s;
+	animation-delay: 0.4s;
+}
+
+.tt-grid-wrapper .tt-effect-delay.tt-effect-active li:nth-child(6) a {
+	-webkit-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+}
+
+/* Reverse delays */
+.tt-grid-wrapper .tt-effect-delay-reversed.tt-effect-active li:nth-child(5) a {
+	-webkit-animation-delay: 0.1s;
+	animation-delay: 0.1s;
+}
+
+.tt-grid-wrapper .tt-effect-delay-reversed.tt-effect-active li:nth-child(4) a {
+	-webkit-animation-delay: 0.2s;
+	animation-delay: 0.2s;
+}
+
+.tt-grid-wrapper .tt-effect-delay-reversed.tt-effect-active li:nth-child(3) a {
+	-webkit-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+}
+
+.tt-grid-wrapper .tt-effect-delay-reversed.tt-effect-active li:nth-child(2) a {
+	-webkit-animation-delay: 0.4s;
+	animation-delay: 0.4s;
+}
+
+.tt-grid-wrapper .tt-effect-delay-reversed.tt-effect-active li:nth-child(1) a {
+	-webkit-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+}
+
+/* Animations */
+
+
+
+
+@-webkit-keyframes slideOut { 
+	from { width: 100%; }
+	to { width: 0%; }
+}
+
+@keyframes slideOut { 
+	from { width: 100%; }
+	to { width: 0%; }
+}
+
+@-webkit-keyframes fadeOut { 
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+@keyframes fadeOut { 
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+@-webkit-keyframes fadeIn { 
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes fadeIn { 
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
