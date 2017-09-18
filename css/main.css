@@ -6831,13 +6831,27 @@ body {
 .custom-product-detail #modalert > div, .custom-product-detail #modvigil > div, .custom-product-detail #waklert > div, .custom-product-detail #artvigil > div {
   background: url("/images/artvigil_bg.png") center no-repeat;
   width: 100%;
-  height: 650px; }
+  height: 550px;
+  position: relative; }
 .custom-product-detail .detail {
   width: 260px;
   position: absolute;
-  top: 47%;
+  top: 50%;
   left: 100px;
-  transform: translateY(-54%); }
+  transform: translateY(-50%); }
+.custom-product-detail .key-effects {
+  background: url("/images/key_effects_bg.png") center no-repeat;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding: 60px 0; }
+.custom-product-detail .dosage {
+  padding: 60px 0; }
+  .custom-product-detail .dosage h3 {
+    font-family: 'gotham_medium'; }
+.custom-product-detail .side-effects {
+  background-color: #E9EAEA;
+  padding: 60px 0; }
 
 @media (max-width: 768px) {
   .about img, .achieve img {
