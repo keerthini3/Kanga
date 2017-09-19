@@ -6853,6 +6853,27 @@ body {
   background-color: #E9EAEA;
   padding: 60px 0; }
 
+.checkout-section .table td {
+  vertical-align: middle; }
+.checkout-section .table .total-price {
+  font-family: 'gotham_medium'; }
+.checkout-section #step2 sup {
+  font-size: large;
+  color: #FD004D;
+  top: 0; }
+.checkout-section #step2 .card-details {
+  background-color: #F7F8F9; }
+.checkout-section #step2 .table th, .checkout-section #step2 .table td {
+  border-color: #a0a4a5;
+  border-width: 1px; }
+.checkout-section #step1 .table thead {
+  background-color: #FAFAFA; }
+.checkout-section #step1 .table tbody {
+  font-family: 'gotham_light'; }
+  .checkout-section #step1 .table tbody tr td:nth-child(5), .checkout-section #step1 .table tbody td:nth-child(6) {
+    font-family: 'gotham_medium'; }
+  .checkout-section #step1 .table tbody .btn-secondary {
+    border-radius: 0; }
 .checkout-section .nav-tabs {
   counter-reset: my-badass-counter;
   border-bottom: 0; }
