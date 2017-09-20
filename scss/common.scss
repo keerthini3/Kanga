@@ -1,0 +1,63 @@
+@import "variable";
+
+
+.btn{
+	outline: none;
+	&:focus{
+		box-shadow: none;
+	}
+}
+.btn-default {
+	border: 1px solid $text-default;
+	border-radius: 20px;
+	background-color: transparent;
+}
+.btn-link{
+	color: $border-color;
+	&:hover {
+		text-decoration: none;
+		color: $border-color;
+	}
+}
+.btn-outline-danger {
+	border-color: $text-danger;
+	&:hover {
+		background-color: transparent;
+	}
+}
+
+.btn-secondary {
+	background-color: $text-default;
+	border-radius: 20px;
+	&:hover {
+		background-color: $text-default;
+	}
+}
+
+a{
+	&:hover {
+		text-decoration: none;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+.text-danger {
+	color: #DE0601 !important;
+}
+
+.divder {
+	width: 100px;
+	height: 2px;
+	background-color: $text-danger;
+}
+
+.icon-arrow-right{
+	background: url(/images/icons/icon_arrow_right.png) no-repeat;
+	width: 8px;
+	height: 12px;
+	background-size: 90%;
+	vertical-align: middle;
+	margin-left: 5px;
+}

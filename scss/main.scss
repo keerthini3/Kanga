@@ -1,67 +1,13 @@
 @import "b/bootstrap";
 @import "font";
-@import "cust-carousel";
+@import "variable";
+@import "common";
 
-.btn{
-	outline: none;
-	&:focus{
-		box-shadow: none;
-	}
-}
-.btn-link{
-	color: $border-color;
-	&:hover {
-		text-decoration: none;
-		color: $border-color;
-	}
-}
-.btn-outline-danger {
-	border-color: $text-danger;
-	&:hover {
-		background-color: transparent;
-	}
-}
 
-.btn-secondary {
-	background-color: $text-default;
-	border-radius: 20px;
-	&:hover {
-		background-color: $text-default;
-	}
-}
-
-a{
-	&:hover {
-		text-decoration: none;
-	}
-	&:focus {
-		outline: none;
-	}
-}
-
-.text-danger {
-	color: #DE0601 !important;
-}
-
-.divder {
-	width: 100px;
-	height: 2px;
-	background-color: $text-danger;
-}
-
-.icon-arrow-right{
-	background: url(/images/icons/icon_arrow_right.png) no-repeat;
-	width: 8px;
-	height: 12px;
-	background-size: 90%;
-	vertical-align: middle;
-	margin-left: 5px;
-}
 
 body {
 	color: $text-default;
 	font-family: 'gotham_book';
-	// font-family: 'gotham_medium';
 }
 
 .custom-navbar {
@@ -239,23 +185,20 @@ body {
 				-o-transition: all 0.5s linear;
 				-ms-transition: all 0.5s linear;
 				transition: all 0.5s linear;
-		    // -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-		    // filter: alpha(opacity=0);
-		    // opacity: 0;
-		  }
-		  h4{
-		  	font-family: 'gotham_medium';
-		  }
-		  p{
-		  	font-size: 14px;
-		  	margin: 24px 0;
-		  	height: 126px;
-		  	display: -webkit-box;
-		  	-webkit-line-clamp: 6;
-		  	-webkit-box-orient: vertical;
-		  	overflow: hidden;
-		  	text-overflow: ellipsis;
-		  }
+			}
+			h4{
+				font-family: 'gotham_medium';
+			}
+			p{
+				font-size: 14px;
+				margin: 24px 0;
+				height: 126px;
+				display: -webkit-box;
+				-webkit-line-clamp: 6;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
 		}
 		&:hover {
 			.product-holder {
@@ -678,26 +621,70 @@ body {
 // checkout 
 
 .checkout-section {
+	#cust-tab {
+		counter-reset: step-counter;
+		border-bottom: 0;
+		.nav-item {
+			width: 25%;
+			margin: 30px 0;
+			position: relative;
+			font-family: 'gotham_medium';
+			&:first-child:before,	&:last-child:after {
+				background-color: transparent;
+			}
+
+			&:before{
+				content: "";
+				height: 2px;
+				width: 50%;
+				display: inline-block;
+				background-color: #E8E8E8;
+			}
+			&:after{
+				content: "";
+				height: 2px;
+				width: 50%;
+				display: inline-block;
+				background-color: #E8E8E8;
+			}
+		}
+		.nav-link{
+			border-radius: 50%;
+			color: $text-default;
+			border: 1px solid $text-default;
+			width: 30px;
+			height: 30px;
+			padding: 5px 0px;
+			font-size: 14px;
+			text-align: center;
+			margin: -24px auto;
+			background: #fff;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			&:before {
+				content: counter(step-counter);
+				counter-increment: step-counter;
+			}
+			span {
+				position: absolute;
+				background-color: #fff;
+				margin-left: 20px;
+			}
+			&.active {
+				border-color: $text-danger;
+				span, &:before {
+					color: $text-danger;
+				}
+			}
+		}
+	}
 	.table{
 		td{
 			vertical-align: middle;
 		}
 		.total-price{
 			font-family: 'gotham_medium';
-		}
-	}
-	#step2{
-		sup{
-			font-size: large;
-			color: $red-color;
-			top:0;
-		}
-		.card-details {
-			background-color: #F7F8F9;
-		}
-		.table th, .table td{
-			border-color: #a0a4a5;
-			border-width: 1px;
 		}
 	}
 	#step1{
@@ -717,110 +704,36 @@ body {
 			}
 		}
 	}
-	#cust-tab {
-		counter-reset: my-badass-counter;
-		border-bottom: 0;
-		.nav-item {
-			width: 25%;
-			margin: 30px 0;
-			&:before{
-				content: "";
-			    height: 2px;
-			    width: 100%;
-			    display: inline-block;
-			    background-color: #E8E8E8;
-			}
+	#step2{
+		sup{
+			font-size: large;
+			color: $red-color;
+			top:0;
 		}
-		.nav-link{
-			border-radius: 50%;
-			color: $text-default;
-			border: 1px solid $text-default;
-			width: 30px;
-			height: 30px;
-			padding: 5px 0px;
-			font-size: 14px;
-			text-align: center;
-			margin: -24px auto;
-			&:before{
-				content: counter(my-badass-counter);
-				counter-increment: my-badass-counter;
+		.card-details {
+			background-color: #F7F8F9;
+		}
+		.table th, .table td{
+			border-color: #a0a4a5;
+			border-width: 1px;
+		}
+	}
+
+	#step3{
+		.nav-item {
+			font-family: 'gotham_medium';
+			.nav-link{
+				color: $text-default;
+				&:hover, &:focus {
+					border-color: #fff #fff #ddd;
+				}
+				&.active{
+					border-color: #fff #fff $text-danger;
+					color: $text-danger;
+				}
 			}
 		}
 	}
-	
-	// ul > li.completed > a:before{
-	// 	content: "";
-	// 	background-image: url('icons/checked_white.png');
-	// 	width: 16px;
-	// 	height: 12px;
-	// 	position: absolute;
-	// 	top: 8px;
-	// 	right: 6px;
-	// }
-	// .nav > li > a:hover, .nav > li > a:focus{
- //    background-color: $placeholder-color;
-	// }
-	// li.active span{
-	// 	color: $text-primary;
-	// }
-	// span{
-	// 	color: #7f878b;
-	// 	text-align: center;
-	// 	font-size: 11px;
-	// }
-	
-
-	// li.active:after{
-	// 	content: "";
-	// 	background: $text-primary;
-	// }
-	// li.active:before{
-	// 	content: "";
-	// 	background: $text-primary;
-	// }
-	// li:after{
-	// 	content: "";
- //    height: 2px;
- //    background: #000;
- //    width: 50%;
- //    line-height: 20px;
- //    position: absolute;
- //    top: 12px;
- //    right: 0;
-	// }
-	// li:before{
-	// 	content: "";
- //    height: 2px;
- //    background: $placeholder-color;
- //    width: 50%;
- //    line-height: 20px;
- //    position: absolute;
- //    top: 12px;
- //    left: 0;
-	// }
-	// li:first-child:before{
-	// 	content: none;
-	// }
-	// li:last-child:after{
-	// 	content: none;
-	// }
-	// .completed a{
-	// 	background-color: #46be8a;
-	// }
-	// .completed span{
-	// 	color: #46be8a;
-	// }
-	// .completed:after{
-	// 	content: "";
-	// 	background: #46be8a;
-	// }
-	// .completed:before{
-	// 	content: "";
-	// 	background: #46be8a;
-	// }
-	// .nav > li.completed > a:hover, .nav > li.completed > a:focus{
-	// 	background-color: #46be8a;
-	// }
 }
 
 
