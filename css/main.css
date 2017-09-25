@@ -6326,7 +6326,7 @@ body {
     border-color: #30383B; }
     .custom-navbar .navbar-toggler:focus {
       outline: none; }
-    .custom-navbar .navbar-toggler .toggler-icons {
+    .custom-navbar .navbar-toggler .toggler-icon {
       display: block;
       width: 1.5em;
       height: 2px;
@@ -6687,6 +6687,12 @@ body {
   color: #fff; }
   .custom-product-detail .btn-radio.active {
     background-color: #FD004D; }
+.custom-product-detail #modvigil .btn-radio.active {
+  background-color: #FC3C8E; }
+.custom-product-detail #waklert .btn-radio.active {
+  background-color: #22CE93; }
+.custom-product-detail #artvigil .btn-radio.active {
+  background-color: #531199; }
 .custom-product-detail #modalert > div, .custom-product-detail #modvigil > div, .custom-product-detail #waklert > div, .custom-product-detail #artvigil > div {
   background: url("/images/artvigil_bg.png") center no-repeat;
   width: 100%;

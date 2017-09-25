@@ -36,7 +36,7 @@ body {
 		&:focus {
 			outline: none;
 		}
-		.toggler-icons {
+		.toggler-icon {
 			display: block;
 			width: 1.5em;
 			height: 2px;
@@ -583,6 +583,15 @@ body {
 		&.active {
 			background-color: $red-color;
 		}
+	}
+	#modvigil .btn-radio.active{
+		background-color: $pink-color;
+	}
+	#waklert .btn-radio.active{
+		background-color: $green-color;
+	}
+	#artvigil .btn-radio.active{
+		background-color: $purple-color;
 	}
 	#modalert >div, #modvigil >div, #waklert >div, #artvigil >div {
 		background: url("/images/artvigil_bg.png") center no-repeat;
